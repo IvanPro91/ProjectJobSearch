@@ -1,5 +1,3 @@
-import os
-
 import pytest
 
 from src.classes.cls_file_handler import FileHandlerJob
@@ -101,7 +99,7 @@ def init_hh() -> HH:
 
 @pytest.fixture
 def init_file_handler() -> FileHandlerJob:
-    return FileHandlerJob("test.json")
+    return FileHandlerJob()
 
 
 @pytest.fixture

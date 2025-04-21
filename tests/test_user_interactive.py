@@ -13,10 +13,10 @@ from src.user_interactive import (
 def test_user_inter(capsys: CaptureFixture, init_vacancy: Vacancy) -> None:
     """Тесты"""
     data: list[Vacancy] = [init_vacancy]
-    words = "python".split()
+    words = "Python".split()
     assert filter_vacancies(data, words) == []
 
-    assert get_vacancies_by_salary(data, "1-1000")[0].name == "Тестировщик (QA-инженер)"
+    assert get_vacancies_by_salary(data, "1-70000")[0].name == "Тестировщик (QA-инженер)"
     assert sort_vacancies(data)[0].id_vacancy == "119602010"
     assert get_top_vacancies(data, 1)[0].id_vacancy == "119602010"
     print_vacancies(data)
