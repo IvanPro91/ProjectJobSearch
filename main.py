@@ -21,8 +21,7 @@ def user_interaction() -> None:
     salary_range = input("Введите диапазон зарплат: ")  # Пример: 100000 - 150000
 
     hh_vacancies = hh_api.load_vacancies(search_query)
-    print(hh_vacancies)
-    vacancies_list = Vacancy.get_vacancy(hh_vacancies)
+    vacancies_list = Vacancy.create_vacancies(hh_vacancies)
     file_handler.add_vacancy(vacancies_list)
 
     file_handler.delete_vacancy(vacancies_list[0])

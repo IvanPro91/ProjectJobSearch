@@ -10,4 +10,4 @@ def test_vacancy(init_vacancy: Vacancy, vacancy_data: dict) -> None:
         "(тест-кейсы..."
     )
 
-    assert isinstance(Vacancy.get_vacancy([vacancy_data]), list)
+    assert isinstance(Vacancy.create_vacancies([vacancy_data]), list)
