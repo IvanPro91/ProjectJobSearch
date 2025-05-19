@@ -9,20 +9,13 @@ class FileHandlerBase(ABC):
     """Абстрактный класс который перечисляет методы наследоваемых классов"""
 
     @abstractmethod
-    def write(self, text: list[dict], file_mode: str) -> None:
-        pass
-
+    def write(self, text: list[dict], file_mode: str) -> None: ...
     @abstractmethod
-    def open_file(self) -> None:
-        pass
-
+    def open_file(self) -> None: ...
     @abstractmethod
-    def add_vacancy(self, list_vacancy_hh: list[Vacancy]) -> None:
-        pass
-
+    def add_vacancy(self, list_vacancy_hh: list[Vacancy]) -> None: ...
     @abstractmethod
-    def delete_vacancy(self, vacancy: Vacancy) -> None:
-        pass
+    def delete_vacancy(self, vacancy: Vacancy) -> None: ...
 
 
 class FileHandlerJob(FileHandlerBase):
