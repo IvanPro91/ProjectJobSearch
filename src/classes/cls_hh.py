@@ -8,8 +8,7 @@ class HhBase(ABC):
     """Абстрактный класс"""
 
     @abstractmethod
-    def load_vacancies(self, keyword: str) -> list:
-        pass
+    def load_vacancies(self, keyword: str) -> list: ...
 
 
 class HH(HhBase):
